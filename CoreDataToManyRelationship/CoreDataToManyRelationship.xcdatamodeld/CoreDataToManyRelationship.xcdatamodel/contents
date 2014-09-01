@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="BBBag" representedClassName="BBBag" syncable="YES">
+        <attribute name="bagName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bagOrderingValue" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="item" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BBItem" inverseName="bag" inverseEntity="BBItem" syncable="YES"/>
+    </entity>
+    <entity name="BBItem" representedClassName="BBItem" syncable="YES">
+        <attribute name="itemName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemOrderingValue" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="bag" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BBBag" inverseName="item" inverseEntity="BBBag" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BBItem" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="BBBag" positionX="-360" positionY="-205" width="128" height="88"/>
+    </elements>
+</model>
